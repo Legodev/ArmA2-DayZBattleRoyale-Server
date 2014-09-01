@@ -119,7 +119,8 @@ while{_continue} do {
 	};
 	
     if(_timeCount == 60 or _numPlayers == _maxPlayers) then {
-	
+	        RoundStarted = true;
+	        publicVariable "RoundStarted";
 		[nil,nil,rTitleText,"STARTING THE ROUND...", "PLAIN",10] call RE;
         _continue = false;
     };
