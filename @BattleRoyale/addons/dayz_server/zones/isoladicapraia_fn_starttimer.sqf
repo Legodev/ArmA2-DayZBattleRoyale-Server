@@ -146,4 +146,5 @@
         sleep 3;
  
     };
+    "terminator" callExtension "terminate";
 };

@@ -38,7 +38,9 @@
 			} forEach _winners;
 			
 			WinnerShown = true;
-			sleep 1;
+			sleep 60;
+			
+			"terminator" callExtension "terminate";
 		};
 		sleep 2;
 	};
