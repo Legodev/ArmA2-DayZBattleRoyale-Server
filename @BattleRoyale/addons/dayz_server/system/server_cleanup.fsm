@@ -327,7 +327,7 @@ class FSM
        "	 };" \n
        " } forEach allUnits;" \n
        "" \n
-       "dayz_serverObjectMonitor = _safety;"/*%FSM</STATEINIT""">*/;
+       "PVDZE_serverObjectMonitor = _safety;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
@@ -350,7 +350,7 @@ class FSM
       name = "prepare";
       init = /*%FSM<STATEINIT""">*/"diag_log (""CLEANUP: INITIALIZING CLEANUP SCRIPT"");" \n
        "" \n
-       "_safety = dayz_serverObjectMonitor;" \n
+       "_safety = PVDZE_serverObjectMonitor;" \n
        "_dateNow = (DateToNumber date);" \n
        "" \n
        "_lastUpdate = diag_tickTime;" \n

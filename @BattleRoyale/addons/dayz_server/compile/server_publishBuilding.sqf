@@ -36,7 +36,7 @@ if (_building isKindOf "TentStorage") then {
 	_building addMPEventHandler ["MPKilled",{_this call vehicle_handleServerKilled;}];
 };
 
-dayz_serverObjectMonitor set [count dayz_serverObjectMonitor,_building];
+PVDZE_serverObjectMonitor set [count PVDZE_serverObjectMonitor,_building];
 
 #ifdef OBJECT_DEBUG
 diag_log ("USPB: Created " + (_class) + " with ID " + _uid + " and a combination of " + str(_combination) );

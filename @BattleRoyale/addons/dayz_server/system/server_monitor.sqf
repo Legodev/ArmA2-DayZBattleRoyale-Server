@@ -147,7 +147,7 @@ if (isServer and isNil "sm_done") then {
 			};	
 			
 
-			dayz_serverObjectMonitor set [count dayz_serverObjectMonitor,_object];
+			PVDZE_serverObjectMonitor set [count PVDZE_serverObjectMonitor,_object];
 		} forEach _buildingArray;
 		
 	
@@ -359,7 +359,7 @@ if (isServer and isNil "sm_done") then {
 			_entity setPos _point;
 			[_entity, _inventory] call fa_populateCargo;
 			
-			dayz_serverObjectMonitor set [count dayz_serverObjectMonitor, _entity];
+			PVDZE_serverObjectMonitor set [count PVDZE_serverObjectMonitor, _entity];
 			diag_log ("_entity that was placed was " + str(_entity) + " was used");
 			_squad = 0;
 			_combination = 0;
@@ -415,7 +415,7 @@ if (isServer and isNil "sm_done") then {
 
 	// antiwallhack
 	call compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\fa_antiwallhack.sqf";	
-	[] execVM "\z\addons\dayz_server\server_starter\serverBegin.sqf";
+	[] execVM "\z\addons\dayz_server\restarter\serverBegin.sqf";
 	sm_done = true;
 	publicVariable "sm_done";
 	

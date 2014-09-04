@@ -89,7 +89,7 @@ if (!_isNew) then {
 	//RETURNING CHARACTER		
 	 _inventory =  		[];
 	_backpack = 		[];
-	_survival =			[];
+	_survival =			[0,0,0];
 	_model =		_primary select 7;
 	_hiveVer =		_primary select 8;
 	
@@ -173,6 +173,12 @@ if (_hiveVer >= dayz_hiveVersionNo) then {
 
 //Server publishes variable to clients and WAITS
 //_playerObj setVariable ["publish",[_charID,_inventory,_backpack,_survival,_isNew,dayz_versionNo,_model,_isHiveOk,_newPlayer],true];
+
+if (_isInfected) then {
+	_isInfected = 1;
+} else {
+	_isInfected = 0;
+};
 
 dayzPlayerLogin = [_charID,_inventory,_backpack,_survival,_isNew,dayz_versionNo,_model,_isHiveOk,_newPlayer,_isInfected];
 (owner _playerObj) publicVariableClient "dayzPlayerLogin";

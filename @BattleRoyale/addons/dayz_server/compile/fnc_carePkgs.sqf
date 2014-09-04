@@ -8,7 +8,7 @@ if (isDedicated) then {
 	_vehicleloottype = ["Residential","Industrial","Military","Farm","Supermarket","Hospital"] call BIS_fnc_selectRandom;
 
 	_veh = createVehicle [_randomvehicle,_position, [], 0, "CAN_COLLIDE"];
-	dayz_serverObjectMonitor set [count dayz_serverObjectMonitor,_veh];
+	PVDZE_serverObjectMonitor set [count PVDZE_serverObjectMonitor,_veh];
 	_veh setVariable ["ObjectID",1,true];
 
 	if (_randomvehicle == "Misc_cargo_cont_net1") then { _num = round(random 3) + 3; };

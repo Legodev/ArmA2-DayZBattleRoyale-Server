@@ -32,7 +32,7 @@ if (_object isKindOf "TentStorage") then {
 	_object addMPEventHandler ["MPKilled",{_this call vehicle_handleServerKilled;}];
 };
 
-dayz_serverObjectMonitor set [count dayz_serverObjectMonitor,_object];
+PVDZE_serverObjectMonitor set [count PVDZE_serverObjectMonitor,_object];
 
 #ifdef OBJECT_DEBUG
 diag_log ("DSPO: Created " + (_class) + " with ID " + _uid + " and a combination of " + str(_combination) );
