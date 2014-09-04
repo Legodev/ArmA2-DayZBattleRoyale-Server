@@ -142,7 +142,7 @@ if (x == 16) then {
 if (x == 17) then {
 	_this = _this select 0;
 	_this addMagazineCargoGlobal ["ItemBandage", 1];
-	_this addWeaponCargoGlobal ["MeleeBaseBallBatNails", 1];
+	_this addWeaponCargoGlobal ["MeleeCrowbar", 1];
 	_this addWeaponCargoGlobal ["ItemGps", 1];
 	_this addWeaponCargoGlobal ["ItemCompass", 1];
 };
@@ -156,28 +156,28 @@ if (x == 18) then {
 if (x == 19) then {
 	_this = _this select 0;
 	_this addMagazineCargoGlobal ["ItemBandage", 1];
-	_this addWeaponCargoGlobal ["MeleeBaseBallBatNails", 1];
+	_this addWeaponCargoGlobal ["MeleeCrowbar", 1];
 	_this addWeaponCargoGlobal ["ItemGps", 1];
 	_this addWeaponCargoGlobal ["ItemCompass", 1];
 };
 if (x == 20) then {
 	_this = _this select 0;
 	_this addMagazineCargoGlobal ["ItemBandage", 1];
-	_this addWeaponCargoGlobal ["MeleeBaseBallBatBarbed", 1];
+	_this addWeaponCargoGlobal ["MeleeHatchet_DZE", 1];
 	_this addWeaponCargoGlobal ["ItemGps", 1];
 	_this addWeaponCargoGlobal ["ItemCompass", 1];
 };
 if (x == 21) then {
 	_this = _this select 0;
 	_this addMagazineCargoGlobal ["ItemBandage", 1];
-	_this addWeaponCargoGlobal ["MeleeBaseBallBat", 1];
+	_this addWeaponCargoGlobal ["MeleeSledge", 1];
 	_this addWeaponCargoGlobal ["ItemGps", 1];
 	_this addWeaponCargoGlobal ["ItemCompass", 1];
 };
 if (x == 22) then {
 	_this = _this select 0;
 	_this addMagazineCargoGlobal ["ItemBandage", 1];
-	_this addMagazineCargoGlobal ["MeleeBaseBallBatBarbed", 1];
+	_this addMagazineCargoGlobal ["MeleeHatchet_DZE", 1];
 	_this addWeaponCargoGlobal ["ItemGps", 1];
 	_this addWeaponCargoGlobal ["ItemCompass", 1];
 };
@@ -185,7 +185,7 @@ if (x == 22) then {
 if (x == 23) then {
 	_this = _this select 0;
 	_this addMagazineCargoGlobal ["ItemBandage", 1];
-	_this addMagazineCargoGlobal ["MeleeBaseBallBatBarbed", 1];
+	_this addMagazineCargoGlobal ["MeleeHatchet_DZE", 1];
 	_this addWeaponCargoGlobal ["ItemGps", 1];
 	_this addWeaponCargoGlobal ["ItemCompass", 1];
 };
