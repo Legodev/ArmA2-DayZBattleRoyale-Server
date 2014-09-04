@@ -1,4 +1,4 @@
-:: Arma Server Starter by lazyink (PLAYERUNKNOWN) : modified by @Pwnoz0r
+:: Arma Server Starter by lazyink (PLAYERUNKNOWN) : modified by @Pwnoz0r, Legodev
 
 @echo off
 
@@ -30,42 +30,52 @@ title Lazy's DayZ Battle Royale Server Starter
 echo (%time%)DayZ Battle Royale Charater Data Reset
 timeout 1
 
+if exist brmissionfiles\dayz_server.pbo copy /Y brmissionfiles\dayz_server.pbo @BattleRoyale\addons\dayz_server.pbo
+
 set /a brmap=%random% %%4
 goto %brmap%
 
 :0
-
 echo (%time%) DayZ Battle Royale Kulima Server was started...
 timeout 1
 cd "%ARMADIR%"
-start /wait /HIGH .\Expansion\beta\arma2oaserver.exe -mod=@DayZBattleRoyale;@BattleRoyale; -name=dayz_1.kulima -config=dayz_1.kulima\config_1234.cfg -cfg=dayz_1.kulima\basic.cfg -profiles=dayz_1.kulima cpuCount=4 -world=kulima -exThreads=1 -bandwidthAlg=2 -maxMem=2047
+set mission=dayz_1.kulima
+if exist %mission%\Arma2OAserver.RPT move /Y %mission%\Arma2OAserver.RPT %mission%\Arma2OAserver_old.RPT
+if exist %mission%\HiveExt.log move /Y %mission%\HiveExt.log %mission%\HiveExt_old.log
+if exist brmissionfiles\%mission%.pbo copy /Y brmissionfiles\%mission%.pbo MPMissions\%mission%.pbo
+start /wait .\arma2oaserver.exe -port=8033 -mod=@DayZBattleRoyale;@DayZ_Epoch;@DayZ_Epoch_BattleRoyale;@BattleRoyale;Expansion\beta\Expansion; -name=%mission% -config=%mission%\config_stable.cfg -cfg=%mission%\basic.cfg -profiles=%mission% cpuCount=4 -world=kulima -exThreads=1 -bandwidthAlg=2 -maxMem=2047
 timeout 1
 goto brstart
-
 :1
-
 echo (%time%) DayZ Battle Royale Isola di Capraia Server was started...
 timeout 1
 cd "%ARMADIR%"
-start /wait /HIGH .\Expansion\beta\arma2oaserver.exe -mod=@DayZBattleRoyale;@BattleRoyale; -name=dayz_1.isoladicapraia -config=dayz_1.isoladicapraia\config_1234.cfg -cfg=dayz_1.isoladicapraia\basic.cfg -profiles=dayz_1.isoladicapraia cpuCount=4 -world=isoladicapraia -exThreads=1 -bandwidthAlg=2 -maxMem=2047
+set mission=dayz_1.isoladicapraia
+if exist %mission%\Arma2OAserver.RPT move /Y %mission%\Arma2OAserver.RPT %mission%\Arma2OAserver_old.RPT
+if exist %mission%\HiveExt.log move /Y %mission%\HiveExt.log %mission%\HiveExt_old.log
+if exist brmissionfiles\%mission%.pbo copy /Y brmissionfiles\%mission%.pbo MPMissions\%mission%.pbo
+start /wait .\arma2oaserver.exe -port=8033 -mod=@DayZBattleRoyale;@DayZ_Epoch;@DayZ_Epoch_BattleRoyale;@BattleRoyale;Expansion\beta;Expansion\beta\Expansion; -name=%mission% -config=%mission%\config_stable.cfg -cfg=%mission%\basic.cfg -profiles=%mission% cpuCount=4 -world=isoladicapraia -exThreads=1 -bandwidthAlg=2 -maxMem=2047
 timeout 1
 goto brstart
-
 :2
-
 echo (%time%) DayZ Battle Royale Emita Server was started...
 timeout 1
 cd "%ARMADIR%"
-start /wait /HIGH .\Expansion\beta\arma2oaserver.exe -mod=@DayZBattleRoyale;@BattleRoyale; -name=dayz_1.emita -config=dayz_1.emita\config_1234.cfg -cfg=dayz_1.emita\basic.cfg -profiles=dayz_1.emita cpuCount=4 -world=emita -exThreads=1 -bandwidthAlg=2 -maxMem=2047
+set mission=dayz_1.emita
+if exist %mission%\Arma2OAserver.RPT move /Y %mission%\Arma2OAserver.RPT %mission%\Arma2OAserver_old.RPT
+if exist %mission%\HiveExt.log move /Y %mission%\HiveExt.log %mission%\HiveExt_old.log
+if exist brmissionfiles\%mission%.pbo copy /Y brmissionfiles\%mission%.pbo MPMissions\%mission%.pbo
+start /wait .\arma2oaserver.exe -port=8033 -mod=@DayZBattleRoyale;@DayZ_Epoch;@DayZ_Epoch_BattleRoyale;@BattleRoyale;Expansion\beta;Expansion\beta\Expansion; -name=%mission% -config=%mission%\config_stable.cfg -cfg=%mission%\basic.cfg -profiles=%mission% cpuCount=4 -world=emita -exThreads=1 -bandwidthAlg=2 -maxMem=2047
 timeout 1
 goto brstart
-
-
 :3
-
 echo (%time%) DayZ Battle Royale F.A.T.A Server was started...
 timeout 1
 cd "%ARMADIR%"
-start /wait /HIGH .\Expansion\beta\arma2oaserver.exe -mod=@DayZBattleRoyale;@BattleRoyale; -name=dayz_1.fata -config=dayz_1.fata\config_1234.cfg -cfg=dayz_1.fata\basic.cfg -profiles=dayz_1.fata cpuCount=4 -world=fata -exThreads=1 -bandwidthAlg=2 -maxMem=2047
+set mission=dayz_1.fata
+if exist %mission%\Arma2OAserver.RPT move /Y %mission%\Arma2OAserver.RPT %mission%\Arma2OAserver_old.RPT
+if exist %mission%\HiveExt.log move /Y %mission%\HiveExt.log %mission%\HiveExt_old.log
+if exist brmissionfiles\%mission%.pbo copy /Y brmissionfiles\%mission%.pbo MPMissions\%mission%.pbo
+start /wait .\arma2oaserver.exe -port=8033 -mod=@DayZBattleRoyale;@DayZ_Epoch;@DayZ_Epoch_BattleRoyale;@BattleRoyale;Expansion\beta;Expansion\beta\Expansion; -name=%mission% -config=%mission%\config_stable.cfg -cfg=%mission%\basic.cfg -profiles=%mission% cpuCount=4 -world=fata -exThreads=1 -bandwidthAlg=2 -maxMem=2047
 timeout 1
 goto brstart
