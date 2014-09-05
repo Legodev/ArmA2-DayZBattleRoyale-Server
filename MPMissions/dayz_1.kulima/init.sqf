@@ -1,5 +1,5 @@
 dayZ_instance =	1;
-dayZ_serverName="DayZBR";
+dayZ_serverName="DZEBR";
 END_TIME = 4500;
 if (isServer) then {
 	RoundStarted = false;
