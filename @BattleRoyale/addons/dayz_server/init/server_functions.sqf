@@ -157,6 +157,9 @@ server_hiveReadWrite = {
 // 	_key call server_hiveWrite;
 // };
 
+/* PVS/PVC - Skaronator */
+server_sendToClient =			compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_sendToClient.sqf";
+
 //onPlayerConnected 		"[_uid,_name] spawn server_onPlayerConnect;";
 onPlayerDisconnected 		"[_uid,_name] call server_onPlayerDisconnect;";
 
