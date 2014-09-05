@@ -1,6 +1,6 @@
 respawn = "BASE";
 respawndelay = 5;
-onLoadMission= "DayZ Battle Royale";
+onLoadMission= "DayZ Epoch Battle Royale";
 OnLoadIntro = "One Dead. 41 To Go.";
 OnLoadIntroTime = False;
 OnLoadMissionTime = False;
