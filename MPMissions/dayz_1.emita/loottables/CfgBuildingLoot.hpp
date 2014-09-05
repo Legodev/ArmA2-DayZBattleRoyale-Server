@@ -138,14 +138,7 @@ class CfgBuildingLoot {
 			{"15Rnd_9x19_LUGER","magazine",0.04},
 			{"KPFS_KarS","weapon",0.03},
 			{"KPFS_10Rnd_762x39_SKS","magazine",0.03},
-			{"Skin_TKCivil1_DZ","magazine",0.04},
-			{"Skin_TKCivil2_DZ","magazine",0.05},
-			{"Skin_Camo1_DZ","magazine",0.02},
-			{"Skin_Soldier1_DZ","magazine",0.01},
-			{"Skin_Officer1_DZ","magazine",0.03},
-			{"Skin_Sniper1_DZ","magazine",0.01},
-			{"Skin_Sniper2_DZ","magazine",0.01},
-			{"Skin_TKSoldier1_DZ","magazine",0.02},
+			{"militaryclothes","militaryclothes",0.08},
 			//Unleashed end
 			
 			{"ItemKnife","generic",0.07},
@@ -161,7 +154,6 @@ class CfgBuildingLoot {
 			{"Crossbow_DZ","weapon",0.01},
 			{"Binocular","weapon",0.06},
 			{"PartWoodPile","magazine",0.06},
-			{"Skin_Camo1_DZ","magazine",0.01},
 			{"WeaponHolder_ItemCrowbar","object",0.08},
 			{"MR43","weapon",0.03},
 			{"","food",0.40},
@@ -316,12 +308,7 @@ class CfgBuildingLoot {
 			{"17Rnd_9x19_glock17","magazine",0.04},
 			{"15Rnd_9x19_LUGER","magazine",0.04},
 			{"KPFS_10Rnd_762x39_SKS","magazine",0.03},
-			{"Skin_Camo1_DZ","magazine",0.01},
-			{"Skin_Soldier1_DZ","magazine",0.01},
-			{"Skin_Officer1_DZ","magazine",0.01},
-			{"Skin_Sniper1_DZ","magazine",0.01},
-			{"Skin_Sniper2_DZ","magazine",0.01},
-			{"Skin_TKSoldier1_DZ","magazine",0.01},
+			{"militaryclothes","militaryclothes",0.08},
 			//Unleashed end
 			{"KPFS_KarS","weapon",0.03},
 			{"KPFS_M1_Carbine","weapon",0.03},
@@ -366,8 +353,6 @@ class CfgBuildingLoot {
 			{"Winchester1866","weapon",0.03},
 			{"Crossbow_DZ","weapon",0.01},
 			{"Binocular","weapon",0.06},
-			{"PartWoodPile","magazine",0.03},
-			{"Skin_Camo1_DZ","magazine",0.01},
 			{"MR43","weapon",0.03},
 			{"","military",0.10},
 			{"","generic",0.60}
@@ -454,17 +439,17 @@ class CfgBuildingLoot {
 		lootType[] = {
 			{ "assaultrifles", "cfglootweapon", 0.10 },
 			{ "submachinegun", "cfglootweapon", 0.04 },
-			{ "sniperrifles", "cfglootweapon", 0.07 },
-			{ "machineguns", "cfglootweapon", 0.06 },
-			{"","military",0.3},
-			{"","medical",0.18},
+			{ "sniperrifles", "cfglootweapon", 0.17 },
+			{ "machineguns", "cfglootweapon", 0.16 },
+			{"","military",0.30},
+			{"","medical",0.10},
 			{"MAAWS","weapon",0.02},
 			{"MedBox0","object",0.05},
 			{"NVGoggles","weapon",0.01},
 			{"AmmoBoxSmall_556","object",0.03},
 			{"AmmoBoxSmall_762","object",0.03},
 			{"militaryclothes","militaryclothes",0.05},
-			{"militaryammo","militaryammo",0.06}
+			{"militaryammo","militaryammo",0.09}
 		};
 	};
 
@@ -477,8 +462,8 @@ class CfgBuildingLoot {
 		lootType[] = {
 			{ "assaultrifles", "cfglootweapon", 0.10 },
 			{ "submachinegun", "cfglootweapon", 0.04 },
-			{ "sniperrifles", "cfglootweapon", 0.07 },
-			{ "machineguns", "cfglootweapon", 0.06 },
+			{ "sniperrifles", "cfglootweapon", 0.17 },
+			{ "machineguns", "cfglootweapon", 0.16 },
 			{ "", "military", 0.3 },
 			{ "", "medical", 0.18 },
 			{ "MAAWS", "weapon", 0.02 },
@@ -661,12 +646,7 @@ class CfgBuildingLoot {
 			{"KPFS_MPi_AK_74","weapon",0.02},
 			{"20Rnd_762x51_FNFAL","magazine",0.03},
 			{"DZ_GunBag_EP1","object",0.04},
-            {"Skin_Camo1_DZ","magazine",0.03},
-            {"Skin_Soldier1_DZ","magazine",0.03},
-            {"Skin_Officer1_DZ","magazine",0.03},
-            {"Skin_Sniper1_DZ","magazine",0.01},
-            {"Skin_Sniper2_DZ","magazine",0.01},
-            {"Skin_TKSoldier1_DZ","magazine",0.01},
+			{"militaryclothes","militaryclothes",0.08},
 			//Unleashed end
 			
 			{"UZI_EP1","weapon",0.05},
@@ -675,11 +655,11 @@ class CfgBuildingLoot {
 			{"MP5A5","weapon",0.04},
 			{"MP5SD","weapon",0.01},
 			{"M4A3_CCO_EP1","weapon",0.02},
-			{ "pistols", "cfglootweapon", 0.04},
-			{ "assaultrifles", "cfglootweapon", 0.13 },
-			{ "sniperrifles", "cfglootweapon", 0.04 },
-			{ "shotgunsingleshot", "cfglootweapon", 0.06 },
-			{ "submachinegun", "cfglootweapon", 0.07 },
+			{ "pistols", "cfglootweapon", 0.02},
+			{ "assaultrifles", "cfglootweapon", 0.08 },
+			{ "sniperrifles", "cfglootweapon", 0.08 },
+			{ "shotgunsingleshot", "cfglootweapon", 0.03 },
+			{ "submachinegun", "cfglootweapon", 0.04 },
 			{"Binocular","weapon",0.03},
 			{"ItemFlashlightRed","military",0.04},
 			{"ItemKnife","military",0.01},
@@ -691,7 +671,7 @@ class CfgBuildingLoot {
 			{"","military",0.3},
 			{"ItemEtool","weapon",0.02},
 			{"ItemSandbag","magazine",0.02},
-			{ "machineguns", "cfglootweapon", 0.03 }
+			{ "machineguns", "cfglootweapon", 0.10 }
 		};
 		lootTypeSmall[] = {};
 	};
@@ -752,7 +732,7 @@ class CfgBuildingLoot {
 			{ "sniperrifles", "cfglootweapon", 0.01 },
 			{ "shotgunsingleshot", "cfglootweapon", 0.05 },
 			{ "ItemGenerator", "magazine", 0.01 },
-			{ "submachinegun", "cfglootweapon", 0.05 },
+			{ "submachinegun", "cfglootweapon", 0.06 },
 			{"PartGeneric","magazine",0.03},
 			{"ItemGenerator","magazine",0.01},
 			{"PartWheel","magazine",0.02},
@@ -796,7 +776,7 @@ class CfgBuildingLoot {
 		lootChance = 1;
 		lootPos[] = {};
 		lootType[] = {
-{"20Rnd_56x45_GP90","magazine",0.02},
+			{"20Rnd_56x45_GP90","magazine",0.02},
 			{"30Rnd_56x45_GP90","magazine",0.02},
 			{"30Rnd_56x45SD_GP90","magazine",0.02},
 			{"100Rnd_56x45_GP90","magazine",0.02},
@@ -1028,17 +1008,12 @@ class CfgBuildingLoot {
 			{"20Rnd_762x51_FNFAL","magazine",0.03},
 			{"DZ_GunBag_EP1","object",0.03},
 			{"DZ_LargeGunBag_EP1","object",0.02},
-            {"Skin_Camo1_DZ","magazine",0.02},
-            {"Skin_Soldier1_DZ","magazine",0.02},
-            {"Skin_Officer1_DZ","magazine",0.02},
-            {"Skin_Sniper1_DZ","magazine",0.01},
-            {"Skin_Sniper2_DZ","magazine",0.01},
-            {"Skin_TKSoldier1_DZ","magazine",0.03},
+			{"militaryclothes","militaryclothes",0.08},
 			//Unleashed end
 			
 			{"M4A1","weapon",0.05},
-			{"M14_EP1","weapon",0.03},
-			{"UZI_EP1","weapon",0.08},
+			{"M14_EP1","weapon",0.04},
+			{"UZI_EP1","weapon",0.03},
 			{"Remington870_lamp","weapon",0.06},
 			{"glock17_EP1","weapon",0.07},
 			{"M240_DZ","weapon",0.01},
@@ -1053,11 +1028,11 @@ class CfgBuildingLoot {
 			{"100Rnd_762x54_PK","magazine",0.01},
 			{"Sa58P_EP1","weapon",0.02},
 			{"Sa58V_EP1","weapon",0.02},
-			{ "assaultrifles", "cfglootweapon", 0.1 },
-			{ "machineguns", "cfglootweapon", 0.04 },
-			{ "sniperrifles", "cfglootweapon", 0.03 },
+			{ "assaultrifles", "cfglootweapon", 0.05 },
+			{ "machineguns", "cfglootweapon", 0.10 },
+			{ "sniperrifles", "cfglootweapon", 0.13 },
 			{ "militaryshotguns", "cfglootweapon", 0.05 },
-			{ "submachinegun", "cfglootweapon", 0.06 },
+			{ "submachinegun", "cfglootweapon", 0.03 },
 			{"AmmoBoxSmall_556","object",0.01},
 			{"AmmoBoxSmall_762","object",0.02},
 			{"Binocular","weapon",0.01},
