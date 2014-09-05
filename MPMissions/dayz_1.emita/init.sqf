@@ -37,12 +37,16 @@ if (RoundStarted) then {
 
 	//Load in compiled functions
 	call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
+	call compile preprocessFileLineNumbers "variables.sqf";
 	progressLoadingScreen 0.1;
 	call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\publicEH.sqf";					//Initilize the publicVariable event handlers
 	progressLoadingScreen 0.2;
 	call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functions_med.sqf";	//Functions used by CLIENT for medical
 	progressLoadingScreen 0.4;
 	call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";					//Compile regular functions
+	player_dumpBackpack = {
+		sleep 100;
+	};
 	progressLoadingScreen 1.0;
 	call compile preprocessFileLineNumbers "\z\addons\br_assets\scripts\shk_pos\shk_pos_init.sqf";					//Compile random marker position
 
@@ -106,7 +110,11 @@ if (RoundStarted) then {
 		//Run the player monitor
 		_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
 		_playerMonitor = [] execVM "\z\addons\dayz_code\system\player_monitor.sqf";
-
+		
+		[] spawn {
+			waitUntil {!isNil "Dayz_logonTime"};
+			[] execVM "\z\addons\br_assets\scripts\fn_startlock.sqf";
+		};
 	};
 
 	// Logo watermark: adding a logo in the bottom left corner of the screen with the server name in it
@@ -119,7 +127,7 @@ if (RoundStarted) then {
 		};
 	};
 
-	if (!isDedicated) then {	
+	if (!isDedicated) then {
 		call compile preProcessFileLineNumbers "\z\addons\br_assets\scripts\fn_playercheck.sqf";	
 		call compile preProcessFileLineNumbers "\z\addons\br_assets\scripts\fn_punish.sqf";
 	};
