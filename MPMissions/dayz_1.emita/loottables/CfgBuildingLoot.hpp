@@ -6,7 +6,7 @@ class CfgBuildingLoot {
 		minRoaming = 0;
 		maxRoaming = 2;
 		zombieClass[] = {"zZombie_Base","z_hunter","z_teacher","z_suit1","z_suit2","z_worker1","z_worker2","z_worker3","z_villager1","z_villager2","z_villager3"};
-		lootChance = 0;
+		lootChance = 1;
 		lootPos[] = {};
 
 		lootPosSmall[] = {};
@@ -47,6 +47,7 @@ class CfgBuildingLoot {
 			{"","generic",0.40}
 		};
 	};
+
 	class Residential: Default {
 		zombieChance = 0.3;
 		maxRoaming = 2;
@@ -92,6 +93,82 @@ class CfgBuildingLoot {
 			{ "specialclothes","single",0.01 }
 		};
 	};
+
+	class Church: Residential {
+		zombieChance = 0.3;
+		minRoaming = 1;
+		maxRoaming = 3;
+		zombieClass[] = {"z_priest","z_priest","z_priest"};
+		lootChance = 1;
+	};
+	
+	class HouseRoaming: Residential { 
+		lootChance = 1; 
+		zombieChance = 0.2; 
+		maxRoaming = 2; 
+	}; 
+
+	class Estate: Default {
+		zombieChance = 0.4;
+		maxRoaming = 4;
+		zombieClass[] = {"zZombie_Base","z_hunter","z_teacher","z_villager1","z_villager2","z_villager3"};
+		lootChance = 1;
+		lootPos[] = {};		
+		itemType[] =	{
+			
+			{"ItemWire","magazine",0.01},
+			{"ItemTankTrap","magazine",0.04},
+			{"ItemSodaMdew","magazine",0.01},
+			{"ItemWatch","generic",0.05},
+			{"ItemCompass","generic",0.05},
+			{"Makarov","weapon",0.04},
+			{"Colt1911","weapon",0.04},
+			
+			//Epoch Chainsaw
+			{"Chainsaw","weapon",0.02},
+			{"CSGAS","magazine",0.04},
+			
+			{"ItemBandage","magazine",0.08},
+			//Unleashed
+			{"kpfs_glock17","weapon",0.03},
+			{"KPFS_P38","weapon",0.03},
+			{"p226sf","weapon",0.03},
+			{"KPFS_8Rnd_9x19_P1","magazine",0.04},
+			{"17Rnd_9x19_glock17","magazine",0.04},
+			{"15Rnd_9x19_LUGER","magazine",0.04},
+			{"KPFS_KarS","weapon",0.03},
+			{"KPFS_10Rnd_762x39_SKS","magazine",0.03},
+			{"Skin_TKCivil1_DZ","magazine",0.04},
+			{"Skin_TKCivil2_DZ","magazine",0.05},
+			{"Skin_Camo1_DZ","magazine",0.02},
+			{"Skin_Soldier1_DZ","magazine",0.01},
+			{"Skin_Officer1_DZ","magazine",0.03},
+			{"Skin_Sniper1_DZ","magazine",0.01},
+			{"Skin_Sniper2_DZ","magazine",0.01},
+			{"Skin_TKSoldier1_DZ","magazine",0.02},
+			//Unleashed end
+			
+			{"ItemKnife","generic",0.07},
+			{"ItemMatchbox","generic",0.06},
+			{"LeeEnfield","weapon",0.03},
+			{"revolver_EP1","weapon",0.04},
+			{"DZ_ALICE_Pack_EP1","object",0.01}, // 16
+			{"DZ_TK_Assault_Pack_EP1","object",0.02}, // 16
+			{"Winchester1866","weapon",0.03},
+			{"MeleeBaseBallBat","weapon",0.05},
+			{"MeleeBaseBallBatNails","weapon",0.05},
+			{"MeleeBaseBallBatBarbed","weapon",0.05},
+			{"Crossbow_DZ","weapon",0.01},
+			{"Binocular","weapon",0.06},
+			{"PartWoodPile","magazine",0.06},
+			{"Skin_Camo1_DZ","magazine",0.01},
+			{"WeaponHolder_ItemCrowbar","object",0.08},
+			{"MR43","weapon",0.03},
+			{"","food",0.40},
+			{"","military",0.15}
+		};			
+	};
+
 	class Office: Default {
 		maxRoaming = 3;
 		zombieClass[] = {"z_suit1","z_suit2"};
@@ -138,11 +215,12 @@ class CfgBuildingLoot {
 			{ "ItemDocument","magazine",0.01 }
 		};
 	};
+
 	class Industrial: Default {
 		zombieChance = 0.4;
 		zombieClass[] = {"z_worker1","z_worker2","z_worker3"};
 		maxRoaming = 2;
-		lootChance = 0.4;
+		lootChance = 1;
 		lootPos[] = {};
 		lootType[] = {
 			{"ItemGenerator","magazine",0.01},
@@ -174,6 +252,7 @@ class CfgBuildingLoot {
 			{ "ItemKeyKit","weapon",0.01 }
 		};
 	};
+
 	class IndustrialFuel: Default {
 		zombieChance = 0.4;
 		zombieClass[] = {"z_worker1","z_worker2","z_worker3"};
@@ -208,6 +287,93 @@ class CfgBuildingLoot {
 			{ "ItemKeyKit","weapon",0.01 }
 		};
 	};
+
+	class InfectedCamps: Default { //5
+		lootPos[] = {};
+		lootType[] = {
+			{"PartGeneric","magazine",0.04},
+			{"PartWheel","magazine",0.05},
+			{"PartFueltank","magazine",0.02},
+			{"PartEngine","magazine",0.02},
+			{"PartGlass","magazine",0.04},
+			{"ItemJerrycan","magazine",0.04},
+			{"ItemWire","magazine",0.01},
+			{"ItemTankTrap","magazine",0.04},
+			{"ItemSodaMdew","magazine",0.01},
+			
+			{"ItemWatch","generic",0.05},
+			{"ItemCompass","generic",0.05},
+			{"Makarov","weapon",0.04},
+			{"Colt1911","weapon",0.04},
+			{"Chainsaw","weapon",0.05},
+			{"CSGAS","magazine",0.02},
+			{"","food",0.40},
+			//Unleashed
+			{"kpfs_glock17","weapon",0.03},
+			{"KPFS_P38","weapon",0.03},
+			{"p226sf","weapon",0.03},
+			{"KPFS_8Rnd_9x19_P1","magazine",0.04},
+			{"17Rnd_9x19_glock17","magazine",0.04},
+			{"15Rnd_9x19_LUGER","magazine",0.04},
+			{"KPFS_10Rnd_762x39_SKS","magazine",0.03},
+			{"Skin_Camo1_DZ","magazine",0.01},
+			{"Skin_Soldier1_DZ","magazine",0.01},
+			{"Skin_Officer1_DZ","magazine",0.01},
+			{"Skin_Sniper1_DZ","magazine",0.01},
+			{"Skin_Sniper2_DZ","magazine",0.01},
+			{"Skin_TKSoldier1_DZ","magazine",0.01},
+			//Unleashed end
+			{"KPFS_KarS","weapon",0.03},
+			{"KPFS_M1_Carbine","weapon",0.03},
+			{"KPFS_M1_Garand","weapon",0.03},
+			{"KPFS_M1_Thompson","weapon",0.03},
+			{"KPFS_M1_Garand_M84","weapon",0.03},
+			{"kpfs_8Rnd_765x17","magazine",0.02},
+			{"KPFS_5Rnd_762x54_Mosin","magazine",0.02},
+			{"KPFS_15Rnd_cal30_Carbine","magazine",0.02},
+			{"KPFS_8Rnd_cal30_60_Gar","magazine",0.02},
+			{"KPFS_30Rnd_45ACP_Thompson","magazine",0.02},
+			{"KPFS_MP44","weapon",0.03},
+			{"KPFS_P220","weapon",0.02},
+			{"KPFS_P225","weapon",0.02},
+			{"KPFS_P226","weapon",0.02},
+			{"KPfs_glock17","weapon",0.03},
+			{"KPFS_P88","weapon",0.03},
+			{"KPFS_P99QA","weapon",0.01},
+			{"KPFS_HKP30","weapon",0.01},
+			{"KPFS_P2000","weapon",0.01},
+			{"KPFS_MP5A3","weapon",0.03},
+			{"KPFS_P1","weapon",0.03},
+			{"KPFS_P12","weapon",0.03},
+			{"KPfs_g36a1","weapon",0.03},
+			{"KPfs_g36a2","weapon",0.01},
+			{"KPfs_g36a4","weapon",0.01},
+			{"KPFS_Makarov","weapon",0.03},
+			{"KPFS_MPi_KM_72","weapon",0.02},
+			{"KPFS_MPi_KMS_72","weapon",0.01},
+			{"KPFS_MPi_AK_74","weapon",0.05},
+			{"KPFS_MPi_AKS_74","weapon",0.02},
+			{"KPFS_MPi_AKS_74K","weapon",0.02},
+			{"KPFS_MPi_KMKIX","weapon",0.03},
+			{"DZ_British_ACU","object",0.05}, // 18
+			{"ItemBandage","magazine",0.08},
+			{"ItemKnife","generic",0.07},
+			{"ItemMatchbox","generic",0.06},
+			{"LeeEnfield","weapon",0.03},
+			{"revolver_EP1","weapon",0.04},
+			{"DZ_ALICE_Pack_EP1","object",0.01}, // 16
+			{"DZ_TK_Assault_Pack_EP1","object",0.02}, // 16
+			{"Winchester1866","weapon",0.03},
+			{"Crossbow_DZ","weapon",0.01},
+			{"Binocular","weapon",0.06},
+			{"PartWoodPile","magazine",0.03},
+			{"Skin_Camo1_DZ","magazine",0.01},
+			{"MR43","weapon",0.03},
+			{"","military",0.10},
+			{"","generic",0.60}
+		};
+	};
+
 	class Farm: Default {
 		zombieChance = 0.3;
 		maxRoaming = 3;
@@ -301,6 +467,7 @@ class CfgBuildingLoot {
 			{"militaryammo","militaryammo",0.06}
 		};
 	};
+
 	class HeliCrash_No50s: Default {
 		zombieChance = 0.4;
 		maxRoaming = 2;
