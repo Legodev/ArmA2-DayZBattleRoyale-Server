@@ -361,6 +361,33 @@ class CfgLoot {
 		,{"M9",0.07}
 		,{"M9SD",0.04}
 		,{"revolver_gold_EP1",0.01}
+		,{"p226",0.03}
+		,{"p226_sd",0.03}
+		,{"p226sf",0.03}
+		,{"p226sf_sd",0.03}
+		,{"KPFS_P1",0.03}
+		,{"KPFS_P8",0.03}
+		,{"KPFS_P12",0.01}
+		,{"KPFS_P12SD",0.03}
+		,{"KPFS_P38",0.03}
+		,{"KPFS_P38k",0.03}
+		,{"KPFS_TT33",0.01}
+		,{"KPFS_MP2",0.01}
+		,{"KPFS_MP2A1",0.03}
+		,{"KPFS_KarS",0.03}
+		,{"KPFS_MP44",0.01}
+		,{"KPFS_PZF60",0.03}
+		,{"KPFS_HK4",0.01}
+		,{"KPFS_P5",0.01}
+		,{"KPFS_HKP7",0.01}
+		,{"KPFS_P220",0.03}
+		,{"KPFS_P225",0.02}
+		,{"KPFS_P226",0.02}
+		,{"KPFS_P88",0.03}
+		,{"KPFS_P99QA",0.03}
+		,{"KPFS_HKP30",0.01}
+		,{"KPFS_P2000",0.01}
+		,{"KPFS_Makarov",0.03}
 	};
 	shotgunsingleshot[] = {
 		{"Winchester1866",0.25}
@@ -370,6 +397,17 @@ class CfgLoot {
 		,{"Remington870_lamp",0.1}
 		,{"Crossbow_DZ",0.07}
 		,{"M1014",0.05}
+		,{"KPFS_Sauer_38h",0.03}
+		,{"KPFS_Mauser_Hsc",0.03}
+		,{"KPFS_Walther_PP",0.03}
+		,{"KPFS_Mosin_Nagant",0.03}
+		,{"KPFS_Mosin_Nagant_PU",0.03}
+		,{"KPFS_PPSh",0.03}
+		,{"KPFS_BAR",0.03}
+		,{"KPFS_M1_Carbine",0.03}
+		,{"KPFS_M1_Garand",0.03}
+		,{"KPFS_M1_Thompson",0.03}
+		,{"KPFS_M1_Garand_M84",0.03}
 	};
 	farmweapons[] = {
 		{"Winchester1866",0.25}
@@ -380,6 +418,17 @@ class CfgLoot {
 		,{"Crossbow_DZ",0.07}
 		,{"huntingrifle",0.05}
 		,{"Chainsaw",0.01}
+		,{"KPFS_Sauer_38h",0.03}
+		,{"KPFS_Mauser_Hsc",0.03}
+		,{"KPFS_Walther_PP",0.03}
+		,{"KPFS_Mosin_Nagant",0.03}
+		,{"KPFS_Mosin_Nagant_PU",0.03}
+		,{"KPFS_PPSh",0.03}
+		,{"KPFS_BAR",0.03}
+		,{"KPFS_M1_Carbine",0.03}
+		,{"KPFS_M1_Garand",0.03}
+		,{"KPFS_M1_Thompson",0.03}
+		,{"KPFS_M1_Garand_M84",0.03}
 	};
 	sniperrifles[] = {
 		{"AK_107_PSO",0.1}
@@ -398,6 +447,8 @@ class CfgLoot {
 		,{"SCAR_H_LNG_Sniper_SD",0.03}
 		,{"M14_EP1",0.02}
 		,{"DMR",0.01}
+		,{"KPFS_PSL",0.01}
+		,{"SCAR_H_LNG_Sniper",0.01}
 	};
 	sniperriflesammo[] = {
 		{"30Rnd_545x39_AKSD",0.18}
@@ -410,6 +461,7 @@ class CfgLoot {
 		,{"5x_22_LR_17_HMR",0.1}
 		,{"20Rnd_762x51_SB_SCAR",0.07}
 		,{"20Rnd_9x39_SP5_VSS",0.05}
+		,{"KPFS_10Rnd_PSL",0.02}
 	};
 	submachinegun[] = {
 		{"UZI_EP1",0.25}
@@ -419,6 +471,21 @@ class CfgLoot {
 		,{"bizon_silenced",0.1}
 		,{"UZI_SD_EP1",0.07}
 		,{"MP5SD",0.05}
+		,{"MP5K",0.03}
+		,{"MP5A5n",0.03}
+		,{"MP5A5_REFLEX",0.03}
+		,{"MP5A5_AIMPOINT",0.03}
+		,{"MP5A5_ACOG",0.01}
+		,{"MP5SD6",0.03}
+		,{"MP5SD6_REFLEX",0.03}
+		,{"MP5SD6_AIMPOINT",0.03}
+		,{"MP5SD6_ACOG",0.01}
+		,{"KPFS_MP5A3SD",0.01}
+		,{"KPFS_MP5A3",0.03}
+		,{"KPFS_PM63",0.01}
+		,{"KPFS_KarS",0.03}
+		,{"KPFS_8Rnd_762x25_TT33",0.04}
+		,{"KPFS_TT33",0.05}
 	};
 	assaultrifles[] = {
 		{"AKS_74_kobra",0.05}
@@ -452,6 +519,82 @@ class CfgLoot {
 		,{"BAF_L85A2_RIS_SUSAT",0.02}
 		,{"BAF_L85A2_RIS_Holo",0.01}
 		,{"M4A1_HWS_GL_SD_Camo",0.01}
+		,{"KPfs_g36a1",0.03}
+		,{"KPfs_g36a2",0.03}
+		,{"KPfs_g36a4",0.01}
+		,{"KPfs_g36k",0.02}
+		,{"KPfs_g36ksk",0.03}
+		,{"KPfs_G3a3",0.03}
+		,{"KPfs_g3a2",0.01}
+		,{"KPfs_g3a4",0.03}
+		,{"KPfs_g3a3zf",0.02}
+		,{"KPFS_MPi_KM_72",0.03}
+		,{"KPFS_MPi_KMS_72",0.03}
+		,{"KPFS_MPi_AK_74",0.03}
+		,{"KPFS_MPi_AKS_74",0.03}
+		,{"KPFS_MPi_AKS_74K",0.03}
+		,{"KPFS_MPi_KMKIX",0.03}
+		,{"KPFS_G1",0.03}
+		,{"sg550_lg97_aimpoint_camo",0.02}
+		,{"KPFS_HK416_Aim",0.03}
+		,{"LEN_L119A1_Acog",0.02}
+		,{"LEN_L119A1_Acog_HG_W",0.02}
+		,{"LEN_L119A1_Acog_CQB_W",0.02}
+		,{"LEN_L119A1_Acog_PF_W",0.03}
+		,{"LEN_L119A1_Acog_PF_SD_W",0.03}
+		,{"LEN_L119A1_Acog_CQB_SD_W",0.02}
+		,{"LEN_L119A1_Acog_CQB_SD_HG_W",0.01}
+		,{"LEN_L119A1_Acog_UGL_W",0.02}
+		,{"LEN_L119A1_Acog_UGL_PF_W",0.02}
+		,{"LEN_L119A1_Acog_HG_W",0.02}
+		,{"LEN_L119A1_Acog_CQB",0.02}
+		,{"LEN_L119A1_Acog_PF",0.03}
+		,{"LEN_L119A1_Acog_PF_SD",0.01}
+		,{"LEN_L119A1_Acog_CQB_SD",0.02}
+		,{"LEN_L119A1_Acog_CQB_SD_HG",0.01}
+		,{"LEN_L119A1_Acog_UGL",0.02}
+		,{"LEN_L119A1_Acog_UGL_PF",0.02}
+		,{"LEN_L119A1_EOT_CQB_W",0.03}
+		,{"LEN_L119A1_EOT_CQB_SD_W",0.01}
+		,{"LEN_L119A1_EOT_CQB",0.03}
+		,{"LEN_L119A1_EOT_CQB_SD",0.01}
+		,{"LEN_L119A1_EOT_PF",0.03}
+		,{"LEN_L119A1_EOT_PF_SD",0.02}
+		,{"LEN_L119A1_EOT_UGL_PF",0.03}
+		,{"LEN_L119A1_Elcan_PF",0.02}
+		,{"LEN_L119A1_Elcan_PF_SD",0.02}
+		,{"LEN_L119A1_Elcan_UGL_PF",0.02}
+		,{"sg550",0.03}
+		,{"sg550_kern",0.03}
+		,{"sg550_lg97",0.03}
+		,{"sg550_lg97_aimpoint",0.03}
+		,{"sg550_lg97_aimpoint_camo",0.03}
+		,{"sg550_sniper",0.01}
+		,{"sg551",0.03}
+		,{"sg551_lg97",0.03}
+		,{"sg551_acog",0.01}
+		,{"sg551_acog_lg97",0.01}
+		,{"sg551_COMMANDO_LG97_AIM_CAMO",0.03}
+		,{"sg551_commando_aim",0.03}
+		,{"sg551_commando_lg97_aim",0.03}
+		,{"sg552",0.03}
+		,{"sg552_reflex",0.03}
+		,{"sg552sd_reflex",0.01}
+		,{"sg552_commando",0.03}
+		,{"sg552_commando_sd",0.01}
+		,{"sg552_commando_mg",0.01}
+		,{"sg552_commando_mg_eotech",0.03}
+		,{"sg552_mp_aimpoint",0.03}
+		,{"sg552_mp_aimpoint_sd",0.01}
+		,{"sg552lb",0.03}
+		,{"sg552lb_commando_reflex",0.03}
+		,{"sg552lb_aimpoint",0.03}
+		,{"sg552lb_acog",0.01}
+		,{"SCAR_L_CQC_CCO_SD",0.02}
+		,{"SCAR_L_STD_EGLM_RCO",0.02}
+		,{"SCAR_L_STD_Mk4CQT",0.02}
+		,{"SCAR_H_CQC_CCO",0.03}
+		,{"SCAR_H_CQC_CCO_SD",0.02}
 	};
 	assaultrifleammo[] = {
 		{"30Rnd_762x39_SA58",0.25}
@@ -460,6 +603,17 @@ class CfgLoot {
 		,{"30Rnd_545x39_AK",0.11}
 		,{"30Rnd_556x45_StanagSD",0.12}
 		,{"20Rnd_762x51_FNFAL",0.07}
+		,{"20Rnd_56x45_GP90",0.02}
+		,{"30Rnd_56x45_GP90",0.02}
+		,{"30Rnd_56x45SD_GP90",0.02}
+		,{"100Rnd_56x45_GP90",0.02}
+		,{"200Rnd_56x45_GP90",0.02}
+		,{"KPFS_100Rnd_762x39_RPD",0.02}
+		,{"KPFS_10Rnd_762x39_SKS",0.02}
+		,{"20Rnd_762x51_B_SCAR",0.02}
+		,{"20Rnd_762x51_SB_SCAR",0.02}
+		,{"KPFS_30Rnd_762x43_STG44",0.02}
+		,{"30Rnd_556x45_G36",0.02}
 	};
 	machineguns[] = {
 		{"RPK_74",0.11}
@@ -474,6 +628,8 @@ class CfgLoot {
 		,{"M240_DZ",0.08}
 		,{"M249_EP1_DZ",0.05}
 		,{"Mk_48_DZ",0.05}
+		,{"KPFS_MG3",0.01}
+		,{"KPFS_MG1",0.01}
 	};
 	machinegunammo[] = {
 		{"100Rnd_556x45_BetaCMag",0.2}
@@ -482,6 +638,7 @@ class CfgLoot {
 		,{"100Rnd_762x51_M240",0.15}
 		,{"100Rnd_762x54_PK",0.15}
 		,{"200Rnd_556x45_M249",0.15}
+		,{"KPFS_120Rnd_MG1",0.02}
 	};
 	machinegunammoexpl[] = {
 		{"100Rnd_556x45_BetaCMag",0.2}
