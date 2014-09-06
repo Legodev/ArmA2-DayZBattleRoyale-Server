@@ -9,7 +9,7 @@ if (isServer) then {
 };
 
 if (RoundStarted) then {
-	startLoadingScreen ["you cannot join because the round already started - you will get kicked in 10 seconds","RscDisplayLoadCustom"];
+	startLoadingScreen ["You can't join the mission because the round has already started - you will be kicked in 10 seconds. See you later!","RscDisplayLoadCustom"];
 	_seconds = 0.0;
 	while {_seconds < 1.0} do {
 		_seconds = _seconds + 0.1;
