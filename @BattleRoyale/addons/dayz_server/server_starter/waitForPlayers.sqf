@@ -1,10 +1,7 @@
 //Code by lazyink and w4ago @ zombiesspain.es
 
-private ["_continue","_numPlayers","_timeCount","_numberOfPlayersToStart","_maxPlayers","_result","_map","_tempMaxSpawns","_hordespawns","_weatherType"];
+private ["_continue","_numPlayers","_timeCount","_result","_map","_tempMaxSpawns","_hordespawns","_weatherType"];
 _continue = true;
-_numberOfPlayersToStart = 1;
-_maxPlayers = 42;
-
 _map = worldName;
 
 
@@ -25,12 +22,12 @@ fnc_br_numberOfPlayers = {
 _timeCount = 0;
 while{_continue} do {
     _numPlayers = [] call fnc_br_numberOfPlayers;
-    if(_numPlayers >= _numberOfPlayersToStart ) then {
+    if(_numPlayers >= numberOfPlayersToStart ) then {
         _continue = false;
     };
+
     if(_timeCount == 30) then {
-    
-        [nil,nil,rTitleText,format["WAITING FOR %1 PLAYERS TO START THE ROUND! VOIP/VOICE COMMS IN THE START AREA MAY CAUSE THE SERVER TO LAG OUT OR CRASH SO PLEASE DON'T ABUSE IT!",_numberOfPlayersToStart], "PLAIN",10] call RE;
+        [nil,nil,rTitleText,format["WAITING FOR %1 PLAYERS TO START THE ROUND! VOIP/VOICE COMMS IN THE START AREA MAY CAUSE THE SERVER TO LAG OUT OR CRASH SO PLEASE DON'T ABUSE IT!",numberOfPlayersToStart], "PLAIN",10] call RE;
         _timeCount = 0;
     };
     
@@ -43,8 +40,6 @@ diag_log("BR Tools: Player minimum reached.");
 _continue = true;
 _timeCount = 0;
 while{_continue} do {
-
-    _numPlayers = [] call fnc_br_numberOfPlayers;
 	
     if(_timeCount == 10) then {
 		
@@ -118,7 +113,7 @@ while{_continue} do {
 		
 	};
 	
-    if(_timeCount == 60 or _numPlayers == _maxPlayers) then {
+    if(_timeCount == 60) then {
 	
 		RoundStarted = true;
 		publicVariable "RoundStarted";

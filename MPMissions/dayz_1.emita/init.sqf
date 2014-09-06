@@ -1,6 +1,8 @@
 dayZ_instance =	1;
 dayZ_serverName="DZEBR";
 END_TIME = 4500;
+numberOfPlayersToStart = 3;
+
 if (isServer) then {
 	RoundStarted = false;
 	publicVariable "RoundStarted";
@@ -120,6 +122,7 @@ if (RoundStarted) then {
 			waitUntil {!isNil "Dayz_logonTime"};
 			[] execVM "\z\addons\br_assets\scripts\fn_startlock.sqf";
 			[] execVM "fn_startZombieProtection.sqf";
+			[] execVM "debugtools\debugtools_activate.sqf";
 		};
 	};
 

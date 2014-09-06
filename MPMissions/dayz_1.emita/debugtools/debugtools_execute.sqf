@@ -1,0 +1,1 @@
+[] execVM "debugtools\debugtools_main.sqf";

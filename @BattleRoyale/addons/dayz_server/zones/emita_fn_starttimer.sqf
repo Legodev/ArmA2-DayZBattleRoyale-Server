@@ -150,5 +150,7 @@
         sleep 1;
  
     };
-    "terminator" callExtension "terminate";
+    if (isNil "preventRestart") then {
+		"terminator" callExtension "terminate";
+	};
 };

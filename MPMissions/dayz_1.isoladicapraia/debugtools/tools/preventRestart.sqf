@@ -1,0 +1,2 @@
+preventRestart = true;
+publicVariable "preventRestart";

@@ -4,9 +4,16 @@
     
 private ["_map","_waitForConnection","_waitForPlayers","_date1","_key","_result","_outcome"];
 
+doRestart = false;
+"doRestart" addPublicVariableEventHandler {
+	if (doRestart) then {
+		sleep 2;
+		"terminator" callExtension "terminate";
+	};
+};
 
 //Wait for X players to start the game.
-_waitForPlayers = [] execVM "z\addons\dayz_server\restarter\waitForPlayers.sqf";
+_waitForPlayers = [] execVM "z\addons\dayz_server\server_starter\waitForPlayers.sqf";
 waitUntil {scriptDone  _waitForPlayers};
 
 //Start the clock

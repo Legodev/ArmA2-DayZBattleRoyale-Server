@@ -1,0 +1,2 @@
+RoundStarted = false;
+publicVariable "RoundStarted";

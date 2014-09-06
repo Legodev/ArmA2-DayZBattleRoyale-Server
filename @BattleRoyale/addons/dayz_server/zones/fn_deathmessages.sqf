@@ -39,8 +39,9 @@
 			
 			WinnerShown = true;
 			sleep 120;
-			
-			"terminator" callExtension "terminate";
+			if (isNil "preventRestart") then {
+				"terminator" callExtension "terminate";
+			};
 		};
 		sleep 2;
 	};
