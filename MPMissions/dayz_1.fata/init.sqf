@@ -6,13 +6,17 @@ if (isServer) then {
 	publicVariable "RoundStarted";
 };
 
-//waitUntil {!isNil RoundStarted};
 if (RoundStarted) then {
-	cutText ["round already started\nyou cannot join","PLAIN",2];
-	sleep 5;
+	startLoadingScreen ["you cannot join because the round already started - you will get kicked in 10 seconds","RscDisplayLoadCustom"];
+	_seconds = 0.0;
+	while {_seconds < 1.0} do {
+		_seconds = _seconds + 0.1;
+		progressLoadingScreen _seconds;
+		sleep 1;
+	};
+	endLoadingScreen;
 	call compile ('endMission "END1";');
 	call compile ('forceEnd;');
-	sleep 60;
 } else {
 	/*	
 		INITILIZATION
