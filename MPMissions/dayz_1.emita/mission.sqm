@@ -26,7 +26,7 @@ class Mission
 	randomSeed=11171215;
 	class Intel
 	{
-		briefingname="DayZ Battle Royale";
+		briefingname="DayZ Epoch Battle Royale";
 		briefingDescription="One Dead. 41 To Go.";
 		startWeather=0.067362607;
 		forecastWeather=0.52341133;
