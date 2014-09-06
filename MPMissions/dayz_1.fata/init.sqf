@@ -115,6 +115,7 @@ if (RoundStarted) then {
 		[] spawn {
 			waitUntil {!isNil "Dayz_logonTime"};
 			[] execVM "\z\addons\br_assets\scripts\fn_startlock.sqf";
+			[] execVM "fn_startZombieProtection.sqf";
 		};
 	};
 
