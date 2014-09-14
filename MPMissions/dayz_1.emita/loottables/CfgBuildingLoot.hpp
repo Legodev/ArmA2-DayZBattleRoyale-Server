@@ -523,7 +523,12 @@ class CfgBuildingLoot {
 			{"ItemSandbag","magazine",0.02},
 			{ "machineguns", "cfglootweapon", 0.10 }
 		};
-		lootTypeSmall[] = {};
+		lootTypeSmall[] = {
+			{ "pistols", "cfglootweapon", 0.14 },
+			{ "Binocular", "weapon", 0.10 },
+			{ "ItemGPS", "weapon", 0.08 },
+			{ "", "military", 0.35 }
+		};
 	};
 	class MilitaryIndustrial: Default {
 		zombieChance = 0.3;
