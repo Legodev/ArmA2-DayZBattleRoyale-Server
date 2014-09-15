@@ -78,7 +78,7 @@ _newPlayer = 	_primary select 1;
 _isNew = 		count _primary < 6; //_result select 1;
 _charID = 		_primary select 2;
 _randomSpot = false;
-_isInfected = false;
+_isInfected = 0;
 
 //diag_log ("LOGIN RESULT: " + str(_primary));
 
@@ -87,75 +87,30 @@ _hiveVer = 0;
 
 if (!_isNew) then {
 	//RETURNING CHARACTER		
-	 _inventory =  		[];
-	_backpack = 		[];
+	_inventory =		[];
+	_backpack =		[];
 	_survival =			[0,0,0];
 	_model =		_primary select 7;
 	_hiveVer =		_primary select 8;
-	
-	
+
 	if (!(_model in ["Survivor2_DZ","Survivor3_DZ","Bandit1_DZ","SurvivorW2_DZ","BanditW1_DZ","Camo1_DZ","Camo2_DZ","Soldier1_DZ","Soldier2_DZ","Rocket_DZ","Officer_DZ","Sniper1_DZ","Sniper2_DZ","TKSoldier1_DZ","TKCivil1_DZ","TKCivil2_DZ","TKWorker1_DZ","TKWorker2_DZ","CamoW1_DZ","SoldierW1_DZ","OfficerW1_DZ","SniperW1_DZ","SniperW2_DZ","TKWorkerW1_DZ","TKWorkerW2_DZ","TKSoldierW1_DZ","TKCivilW1_DZ","TKCivilW2_DZ"])) then {
-	_model = "Survivor2_DZ";
+		_model = "Survivor2_DZ";
 	};
-    
-	if (_playerID == "22773510") then {
-	_model = "TheVisad_DZU";
-	};
-	if (_playerID == "71581894") then {
-	_model = "TheVisad_DZU";
-	};
-	if (_playerID == "59883846") then {
-	_model = "XyberViri_DZU";
-	};
-	if (_playerID == "95700038") then {
-	_model = "PvtAmmo_DZU";
-	};
-	if (_playerID == "37624070") then {
-    _model = "XerXes_DZU";
-    };
     
 } else {
-	/* //disabling for now due to issues with the system
-	// get medical from past character
-	_key_medical = format["CHILD:150:%1:",_playerID];
-	_medical = _key_medical call server_hiveReadWrite;
-	
-	// check if infected
-	if (count _medical > 0) then {
-		_isInfected = _medical select 2;
-	};
-	*/
 	_model =		_primary select 3;
 	_hiveVer =		_primary select 4;
-	if (isNil "_model") then {
+	if (isNil "_model" || _model == "") then {
 		_model = "Survivor2_DZ";
-	} else {
-		if (_model == "") then {
-			_model = "Survivor2_DZ";
-		};
 	};
-	if (_playerID == "22773510") then {
-	_model = "TheVisad_DZU";
-	};
-	if (_playerID == "71581894") then {
-	_model = "TheVisad_DZU";
-	};
-	if (_playerID == "59883846") then {
-	_model = "XyberViri_DZU";
-	};
-	if (_playerID == "95700038") then {
-	_model = "PvtAmmo_DZU";
-	};
-    if (_playerID == "37624070") then {
-    _model = "XerXes_DZU";
-    };
+
 	//Record initial inventory
 	_config = (configFile >> "CfgSurvival" >> "Inventory" >> "Default");
 	_mags = getArray (_config >> "magazines");
 	_wpns = getArray (_config >> "weapons");
 	_bcpk = getText (_config >> "backpack");
 	_randomSpot = true;
-	
+
 	//Wait for HIVE to be free
 	_key = format["CHILD:203:%1:%2:%3:",_charID,[_wpns,_mags],[_bcpk,[],[]]];
 	_key call server_hiveWrite;
@@ -170,15 +125,6 @@ if (_hiveVer >= dayz_hiveVersionNo) then {
 	_isHiveOk = true;
 };
 //diag_log ("SERVER RESULT: " + str("X") + " " + str(dayz_hiveVersionNo));
-
-//Server publishes variable to clients and WAITS
-//_playerObj setVariable ["publish",[_charID,_inventory,_backpack,_survival,_isNew,dayz_versionNo,_model,_isHiveOk,_newPlayer],true];
-
-if (_isInfected) then {
-	_isInfected = 1;
-} else {
-	_isInfected = 0;
-};
 
 dayzPlayerLogin = [_charID,_inventory,_backpack,_survival,_isNew,dayz_versionNo,_model,_isHiveOk,_newPlayer,_isInfected];
 (owner _playerObj) publicVariableClient "dayzPlayerLogin";
