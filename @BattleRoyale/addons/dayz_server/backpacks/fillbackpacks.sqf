@@ -177,7 +177,7 @@ if (x == 21) then {
 if (x == 22) then {
 	_this = _this select 0;
 	_this addMagazineCargoGlobal ["ItemBandage", 1];
-	_this addMagazineCargoGlobal ["MeleeHatchet_DZE", 1];
+	_this addWeaponCargoGlobal ["MeleeHatchet_DZE", 1];
 	_this addWeaponCargoGlobal ["ItemGps", 1];
 	_this addWeaponCargoGlobal ["ItemCompass", 1];
 };
@@ -185,7 +185,7 @@ if (x == 22) then {
 if (x == 23) then {
 	_this = _this select 0;
 	_this addMagazineCargoGlobal ["ItemBandage", 1];
-	_this addMagazineCargoGlobal ["MeleeHatchet_DZE", 1];
+	_this addWeaponCargoGlobal ["MeleeHatchet_DZE", 1];
 	_this addWeaponCargoGlobal ["ItemGps", 1];
 	_this addWeaponCargoGlobal ["ItemCompass", 1];
 };
