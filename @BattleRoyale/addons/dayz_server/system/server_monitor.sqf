@@ -415,7 +415,7 @@ if (isServer and isNil "sm_done") then {
 
 	// antiwallhack
 	call compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\fa_antiwallhack.sqf";	
-	[] execVM "\z\addons\dayz_server\restarter\serverBegin.sqf";
+	[] execVM "\z\addons\dayz_server\server_starter\serverBegin.sqf";
 	sm_done = true;
 	publicVariable "sm_done";
 	

@@ -23,14 +23,6 @@ server_updateNearbyObjects =	compile preprocessFileLineNumbers "\z\addons\dayz_s
 fnc_plyrHit   =                 compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\fnc_plyrHit.sqf";
 server_playerVariableChange =   compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_playerVariableChange.sqf";
 server_playerVariablesChange =  compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_playerVariablesChange.sqf";
-// vehicle_handleInteract = {
-// 	private["_object"];
-// 	_object = _this select 0;
-// 	if (_object in needUpdate_objects) then {
-// 		needUpdate_objects = needUpdate_objects - [_object];
-// 	};
-// 	[_object, "all",true] call server_updateObject;
-// };
 
 vehicle_handleServerKilled = {
 	private["_unit","_killer"];
@@ -142,22 +134,16 @@ server_hiveReadWrite = {
 	_resultArray
 };
 
-// server_characterSync = {
-// 	private ["_characterID","_playerPos","_playerGear","_playerBackp","_medical","_currentState","_currentModel","_key"];
-// 	_characterID = 	_this select 0;	
-// 	_playerPos =	_this select 1;
-// 	_playerGear =	_this select 2;
-// 	_playerBackp =	_this select 3;
-// 	_medical = 		_this select 4;
-// 	_currentState =	_this select 5;
-// 	_currentModel = _this select 6;
-// 	
-// 	_key = format["CHILD:201:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:",_characterID,_playerPos,_playerGear,_playerBackp,_medical,false,false,0,0,0,0,_currentState,0,0,_currentModel,0];
-// 	//diag_log ("HIVE: WRITE: "+ str(_key) + " / " + _characterID);
-// 	_key call server_hiveWrite;
-// };
+server_lock = {
+	isLocked = true;
+	publicVariable "isLocked";
+};
 
-/* PVS/PVC - Skaronator */
+server_restart = {
+	waitUntil { forceRestart || !preventRestart };
+	"terminator" callExtension "terminate";
+};
+
 server_sendToClient =			compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\server_sendToClient.sqf";
 
 //onPlayerConnected 		"[_uid,_name] spawn server_onPlayerConnect;";

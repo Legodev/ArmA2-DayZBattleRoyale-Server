@@ -146,7 +146,5 @@
         sleep 3;
  
     };
-    if (isNil "preventRestart") then {
-		"terminator" callExtension "terminate";
-	};
+    [] spawn server_restart;
 };

@@ -1,14 +1,18 @@
+initialized = false;
+dayz_previousID = 0;
 dayZ_instance =	1;
 dayZ_serverName="DZEBR";
+// Battle Royal Options
 END_TIME = 5400;
 numberOfPlayersToStart = 3;
+// Epoch Options
+DZE_MissionLootTable = true;
 
 if (isServer) then {
-	RoundStarted = false;
-	publicVariable "RoundStarted";
+	call compile preprocessFileLineNumbers "\z\addons\dayz_server\init\server_mission_init.sqf";
 };
 
-if (RoundStarted) then {
+if (isLocked) then {
 	startLoadingScreen ["You can't join the mission because the round has already started - you will be kicked in 10 seconds. See you later!","RscDisplayLoadCustom"];
 	_seconds = 0.0;
 	while {_seconds < 1.0} do {
@@ -32,15 +36,11 @@ if (RoundStarted) then {
 
 	//REALLY IMPORTANT VALUES
 	dayzHiveRequest = [];
-	initialized = false;
-	dayz_previousID = 0;
 
 	//disable greeting menu
 	player setVariable ["BIS_noCoreConversations", true];
 	//disable radio messages to be heard and shown in the left lower corner of the screen
 	enableRadio false;
-
-	DZE_MissionLootTable = true;
 
 	//Load in compiled functions
 	call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)

@@ -243,8 +243,7 @@ while {ELAPSED_TIME < END_TIME} do	{
             br_winner_check = true;
             publicVariable "br_winner_check";
             sleep 60;
-            "terminator" callExtension "terminate";
-			
+            [] spawn server_restart;
 	};
     
     sleep 1;

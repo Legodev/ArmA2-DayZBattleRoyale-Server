@@ -1,2 +1,2 @@
-RoundStarted = false;
-publicVariable "RoundStarted";
+isLocked = false;
+publicVariable "isLocked";

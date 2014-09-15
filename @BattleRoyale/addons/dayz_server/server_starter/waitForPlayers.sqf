@@ -115,8 +115,8 @@ while{_continue} do {
 	
     if(_timeCount == 60) then {
 	
-		RoundStarted = true;
-		publicVariable "RoundStarted";
+		[] spawn server_lock;
+
 		[nil,nil,rTitleText,"STARTING THE ROUND...", "PLAIN",10] call RE;
         _continue = false;
     };

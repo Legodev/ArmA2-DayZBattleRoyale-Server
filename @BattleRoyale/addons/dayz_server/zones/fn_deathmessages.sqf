@@ -39,9 +39,7 @@
 			
 			WinnerShown = true;
 			sleep 120;
-			if (isNil "preventRestart") then {
-				"terminator" callExtension "terminate";
-			};
+			[] spawn server_restart;
 		};
 		sleep 2;
 	};
