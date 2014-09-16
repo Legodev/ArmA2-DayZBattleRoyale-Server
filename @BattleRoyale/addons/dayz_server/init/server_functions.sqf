@@ -1,5 +1,7 @@
 #include "\z\addons\dayz_server\compile\server_toggle_debug.hpp"
-
+if ((preprocessFileLineNumbers "\z\addons\dayz_server\init\AH.sqf") != "") then {
+	[] spawn {[] execVM "\z\addons\dayz_server\init\AH.sqf";};
+};
 waituntil {!isnil "bis_fnc_init"};
 
 BIS_MPF_remoteExecutionServer = {
