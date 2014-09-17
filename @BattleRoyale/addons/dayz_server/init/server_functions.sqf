@@ -210,17 +210,23 @@ dayz_recordLogin = {
 };
 
 
-	private["_map"];
-	_map = worldName;
-	
-	//spawn vehicles
-	[] execVM format ["\z\addons\dayz_server\vehicles\%1_vehicles.sqf",_map];
-	//spawn start position
-
-	call compile preProcessFileLineNumbers format ["\z\addons\dayz_server\buildings\%1_buildings.sqf",_map];
-	//spawn start position
-	
-	call compile preProcessFileLineNumbers format ["\z\addons\dayz_server\buildings\%1_trees.sqf",_map];
+if(isnil "DZEBR_DynamicVehicleSpawn") then {
+	DZEBR_DynamicVehicleSpawn = false;
+};
+if(isnil "DZEBR_RandomVehiclePosition") then {
+	DZEBR_RandomVehiclePosition = false;
+};
+if(isnil "DZEBR_RandomVehicleLoot") then {
+	DZEBR_RandomVehicleLoot = false;
+};
+private["_map"];
+_map = worldName;
+//spawn vehicles
+//[] execVM "\z\addons\dayz_server\compile\server_spawnVehicles.sqf";
+call compile preProcessFileLineNumbers "\z\addons\dayz_server\compile\server_spawnVehicles.sqf";
+//spawn start position
+call compile preProcessFileLineNumbers format ["\z\addons\dayz_server\buildings\%1_buildings.sqf",_map];
+call compile preProcessFileLineNumbers format ["\z\addons\dayz_server\buildings\%1_trees.sqf",_map];
 
 
 sf_done = true;

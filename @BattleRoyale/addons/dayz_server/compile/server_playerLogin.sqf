@@ -100,7 +100,11 @@ if (!_isNew) then {
 } else {
 	_model =		_primary select 3;
 	_hiveVer =		_primary select 4;
-	if (isNil "_model" || _model == "") then {
+	
+	if (isNil "_model") then {
+		_model = "Survivor2_DZ";
+	};
+	if (_model == "") then {
 		_model = "Survivor2_DZ";
 	};
 
