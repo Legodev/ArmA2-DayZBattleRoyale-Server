@@ -484,7 +484,6 @@ class CfgLoot {
 		,{"KPFS_MP5A3",0.03}
 		,{"KPFS_PM63",0.01}
 		,{"KPFS_KarS",0.03}
-		,{"KPFS_8Rnd_762x25_TT33",0.04}
 		,{"KPFS_TT33",0.05}
 	};
 	assaultrifles[] = {
