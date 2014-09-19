@@ -2,9 +2,14 @@ initialized = false;
 dayz_previousID = 0;
 dayZ_instance =	1;
 dayZ_serverName="DZEBR";
+dayz_MapArea = 5000;
 // Battle Royal Options
 END_TIME = 4500;
 numberOfPlayersToStart = 3;
+DZEBR_DynamicVehicleSpawn = false;
+DZEBR_RandomVehiclePosition = false;
+DZEBR_RandomVehicleLoot = false;
+DZEBR_VehicleSpawnExcludedArea = [[[1150,8950],1000]];
 // Epoch Options
 DZE_MissionLootTable = true;
 
@@ -122,7 +127,7 @@ if (isLocked) then {
 			waitUntil {!isNil "Dayz_logonTime"};
 			[] execVM "\z\addons\br_assets\scripts\fn_startlock.sqf";
 			[] execVM "fn_startZombieProtection.sqf";
-			[] execVM "debugtools\debugtools_activate.sqf";
+			player addAction [("<t color=""#585858"">" + ("Disconnect") +"</t>"),"disconnect.sqf","",5,false,true,"","!isLocked"];
 		};
 	};
 

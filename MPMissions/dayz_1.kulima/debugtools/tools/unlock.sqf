@@ -1,2 +1,0 @@
-isLocked = false;
-publicVariable "isLocked";

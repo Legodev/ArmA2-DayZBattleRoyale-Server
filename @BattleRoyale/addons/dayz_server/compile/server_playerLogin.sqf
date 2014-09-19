@@ -128,8 +128,27 @@ _isHiveOk = false;	//EDITED
 if (_hiveVer >= dayz_hiveVersionNo) then {
 	_isHiveOk = true;
 };
-//diag_log ("SERVER RESULT: " + str("X") + " " + str(dayz_hiveVersionNo));
 
 dayzPlayerLogin = [_charID,_inventory,_backpack,_survival,_isNew,dayz_versionNo,_model,_isHiveOk,_newPlayer,_isInfected];
 (owner _playerObj) publicVariableClient "dayzPlayerLogin";
 (owner _playerObj) publicVariableClient "br_game_started";
+
+if (isnil "AdminList") then {AdminList = [];};
+if (_playerID in AdminList) then {
+	if ((preprocessFileLineNumbers "\z\addons\dayz_server\debugtools\addaction.sqf") != "") then {
+#ifdef LOGIN_DEBUG	
+		diag_log(format["Player %1 (%2) is an Admin, going to add the Debug Tools",_playerName,_playerID]);
+#endif
+
+		readVariables = compile preprocessFileLineNumbers "\z\addons\dayz_server\debugtools\scripts\readVariables.sqf";
+		(owner _playerObj) publicVariableClient "readVariables";
+
+		listObjects = compile preprocessFileLineNumbers "\z\addons\dayz_server\debugtools\scripts\listObjects.sqf";
+		(owner _playerObj) publicVariableClient "listObjects";
+		
+		DebugTools_AddAction = compile preprocessFileLineNumbers "\z\addons\dayz_server\debugtools\addaction.sqf";
+		(owner _playerObj) publicVariableClient "DebugTools_AddAction";
+
+		[objNull, _playerObj, rSPAWN, [], {[] spawn DebugTools_AddAction;}] call RE;
+	};
+};

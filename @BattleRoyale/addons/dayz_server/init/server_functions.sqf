@@ -141,6 +141,11 @@ server_lock = {
 	publicVariable "isLocked";
 };
 
+server_unlock = {
+	isLocked = false;
+	publicVariable "isLocked";
+};
+
 server_restart = {
 	waitUntil { forceRestart || !preventRestart };
 	"terminator" callExtension "terminate";
@@ -209,7 +214,6 @@ dayz_recordLogin = {
 	_key call server_hiveWrite;
 };
 
-
 if(isnil "DZEBR_DynamicVehicleSpawn") then {
 	DZEBR_DynamicVehicleSpawn = false;
 };
@@ -219,19 +223,20 @@ if(isnil "DZEBR_RandomVehiclePosition") then {
 if(isnil "DZEBR_RandomVehicleLoot") then {
 	DZEBR_RandomVehicleLoot = false;
 };
+
 private["_map"];
 _map = worldName;
-//spawn vehicles
-//[] execVM "\z\addons\dayz_server\compile\server_spawnVehicles.sqf";
-call compile preProcessFileLineNumbers "\z\addons\dayz_server\compile\server_spawnVehicles.sqf";
 //spawn start position
 call compile preProcessFileLineNumbers format ["\z\addons\dayz_server\buildings\%1_buildings.sqf",_map];
 call compile preProcessFileLineNumbers format ["\z\addons\dayz_server\buildings\%1_trees.sqf",_map];
+//spawn vehicles
+//[] execVM "\z\addons\dayz_server\compile\server_spawnVehicles.sqf";
+call compile preProcessFileLineNumbers "\z\addons\dayz_server\compile\server_spawnVehicles.sqf";
 
+call compile preprocessFileLineNumbers "\z\addons\dayz_server\debugtools\activate.sqf";
 
 sf_done = true;
 publicVariable "sf_done";
-
 
 call compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\fa_hiveMaintenance.sqf";
 
